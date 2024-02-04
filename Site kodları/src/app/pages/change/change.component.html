@@ -1,0 +1,39 @@
+<div>
+    <label for="currency">Currency:</label>
+    <input type="text" [(ngModel)]="currency" name="currency">
+  </div>
+  <div>
+    <label for="amount">Amount:</label>
+    <input type="text" [(ngModel)]="amount" name="amount">
+  </div>
+  <div>
+    <label for="desiredCurrency">Desired Currency:</label>
+    <input type="text" [(ngModel)]="desiredCurrency" name="desiredCurrency">
+  </div>
+  <button (click)="push()">Convert</button>
+  
+  <!-- Tablo başlangıcı -->
+  <div *ngIf="conversionResult">
+    <table>
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Rate</th>
+          <th>Calculate String</th>
+          <th>Calculated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ conversionResult.code }}</td>
+          <td>{{ conversionResult.name }}</td>
+          <td>{{ conversionResult.rate }}</td>
+          <td>{{ conversionResult.calculatestr }}</td>
+          <td>{{ conversionResult.calculated }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Tablo bitişi -->
+  
